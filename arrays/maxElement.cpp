@@ -9,13 +9,13 @@ int main() {
 	for(int index=0;index<5;index++){
 		cin>>arr[index];
 	}
-	for(int index=0;index<4;index++){
-		if(arr[index]>arr[index+1]){
+	max=arr[0];
+	for(int index=0;index<5;index++){
+		if(arr[index]>max){
 			max=arr[index];
+			cout<<max<<" ";
 		}
-		else{
-			max=arr[index+1];
-		}
+		
 			
 	}
 	cout<<"max is: "<<max;
