@@ -1,19 +1,28 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 int main(){
-    int arr[]={0,2,2,1,3,2};
-    int size=sizeof(arr)/sizeof(arr[0]);
-    
-    
-    for(int i=0;i<size-1;i++){
-        arr[i+1]+=arr[i];
+    cout<<"enter number of elements in the array : ";
+    int n;cin>>n;
+
+    vector <int> v(n+1,0);
+
+    for(int i=1;i<v.size();i++){
+        cin>>v[i];
     }
+
+    for(int i=0;i<v.size();i++){
+        v[i+1]+=v[i];
+    }
+
+    cout<<endl<<"enter the number of queries ";
     int q;
     cin>>q;
     for(int i=0;i<q;i++){
         int l,r;
         cin>>l>>r;
-        cout<<arr
+        cout<<"ans : "(v[r]-v[l-1]);
+        cout<<endl;
     }
     
     
