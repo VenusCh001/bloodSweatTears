@@ -1,18 +1,40 @@
 #include<iostream>
+#include<vector>
 using namespace std;
-int main(){
-    int arr[]={0,1,0,0,1,1,0};
-    int size=sizeof(arr)/sizeof(arr[0]);
-    for(int i=0;i<size;i++){
-        if (arr[i]>arr[i+1]){
-            int temp=arr[i];
-            arr[i]=arr[i+1];
-            arr[i+1]=temp;
+
+void sortedarray(vector <int> &v){
+    int zero_count=0;
+    for(int ele:v){
+        if (ele==0){
+            zero_count++;
+        }}
+    for(int i=0;i<v.size();i++){
+        if (i<zero_count){
+            v[i]=0;
         }
         else{
-            continue;} 
+            v[i]=1;
+        }
     }
-    for(int i=0;i<size;i++){
-        cout<<arr[i]<<" ";
     }
+int main(){
+    int n;
+    cin>>n;
+
+    vector <int> v(n);
+
+    for(int ele:v){
+        cin>>ele;
+        v.push_back(ele);
+    }
+    
+    sortedarray(v);
+
+    for(int i=0;i<v.size();i++){
+        cout<<v[i]<<" ";
+    }
+    
+    return 0;
 }
+
+    
