@@ -21,7 +21,7 @@ int main(){
     for(int i=0;i<q;i++){
         int l,r;
         cin>>l>>r;
-        cout<<"ans : "(v[r]-v[l-1]);
+        cout<<"ans : "<<(v[r]-v[l-1]);
         cout<<endl;
     }
     
