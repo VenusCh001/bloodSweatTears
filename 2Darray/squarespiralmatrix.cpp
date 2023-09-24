@@ -1,41 +1,39 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int row,col;
-    cout<<"enter rows : "; cin>>row;
-    cout<<"enter columns : "; cin>>col;
-    cout<<"enter elements now :-";
-    int matrix[row][col];
-    for (int i=0;i<row;i++){
-        for(int j=0;j<col;j++){
-            cin>>matrix[i][j];
-        }
-    }
-    int top=0;int bottom=row-1;int left=0;int right=col-1;int direction=0;
+    int n;
+    cout<<"enter n: "; cin>>n;
+    int matrix[n][n];
+    int top=0;int bottom=n-1;int left=0;int right=n-1;int direction=0;int value=1;
     while((left<=right) && (top<=bottom)){
         if (direction==0){
             for(int j=left;j<=right;j++){
-            cout<<matrix[top][j]<<" ";
+            matrix[top][j]=value++;
         }top++;
         }
         else if(direction==1){
             for(int j=top;j<=bottom;j++){
-            cout<<matrix[j][right]<<" ";
+            matrix[j][right]=value++;
         }right--;
         }
         else if(direction==2){
             for(int j=right;j>=left;j--){
-            cout<<matrix[bottom][j]<<" ";
+            matrix[bottom][j]=value++;
         }bottom--;
         }
         else{
             for(int j=bottom;j>=top;j--){
-            cout<<matrix[j][left]<<" ";
+            matrix[j][left]=value++;
         }left++;
         }
 
         direction=(direction+1)%4;
         
     }
-    return 0;
+ for (int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cout<<matrix[i][j]<<" ";
+        }cout<<endl;
+    }
+       return 0;
 }
