@@ -14,8 +14,8 @@ void upper(int n){
         for(int j=0;j<i;j++){
             cout<<" ";
         }
-        for(int j=n-1;j>=i;j--){
-            cout<<arr[i][j]<<" ";
+        for(int j=i;j<n;j++){
+            cout<<arr[i][j];
         }cout<<endl;
     }
 }
