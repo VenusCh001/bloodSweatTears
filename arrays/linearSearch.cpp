@@ -8,15 +8,20 @@ int main() {
 	int key;
 	cin>>key;
 	int flag=-1;
-	
 	for(int index=0;index<sizeof(arr)/sizeof(arr[0]);index++){
 		if(arr[index]==key){
 			flag=index;
             break;
-		}
-		
-			
+		}		
 	}
-	cout<<flag;
+	if(flag>=0){
+		cout<<"element found at index = "<<flag;
+	}
+	else{
+		cout<<"element not found";
+	}
+	cout<<endl;
+	cout<<"name-VENUS CHAUDHARY "<<endl;
+	cout<<"rollno-22201012022"<<endl;
 	return 0;
 }

@@ -1,21 +1,22 @@
 #include <iostream>
 using namespace std;
 int main() {
-	int n;cout<<"number of elements : ";cin>>n;
-	int arr[n];
+	int n;cout<<"number of elements : ";cin>>n;int arr[n];
 	for(int index=0;index<n;index++){
 		cin>>arr[index];}
 	cout<<"original array is : ";
 	for(int index=0;index<n;index++){
 		cout<<arr[index]<<" ";}
-	int start=0;int end=n-1;
-	while(start<end){
-		int temp=arr[start];
-        arr[start]=arr[end];
-        arr[end]=temp;
-		start++;end--;
-	}
-	cout<<endl<<"reversed array is : ";
+	for(int i=0;i<n-1;i++){
+        int minindex=i;
+        for(int j=i+1;j<n;j++){
+            if(arr[minindex]>arr[j]){
+                minindex=j;
+            }}
+        int temp=arr[i];
+        arr[i]=arr[minindex];
+        arr[minindex]=temp;}
+	cout<<endl<<"sorted array is : ";
     for(int index=0;index<n;index++){
 		cout<<arr[index]<<" ";			
 	}
