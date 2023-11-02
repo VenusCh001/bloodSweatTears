@@ -1,5 +1,4 @@
 #include <iostream>
-#include<algorithm>
 using namespace std;
 #define n 100
 class mystack{
@@ -33,41 +32,45 @@ int precedence(char op) {
         return 2;
     return 0; 
 }
-string infixToPrefix(string exp,mystack arr){
-    reverse(exp.begin(),exp.end());
-    string prefix;
+string infixToPostfix(string exp,mystack arr){
+    string postfix;
     for (int i=0;i<exp.length();i++) {
         char c=exp[i];
         if (isalpha(c)) {
-            prefix += c;}
-        else if (c == ')') {
-            arr.push(c);}
+            postfix += c;
+        }
         else if (c == '(') {
-            while (!arr.isempty() && arr.Top() != ')') {
-                prefix += arr.Top();
-                arr.pop();}
-            if (!arr.isempty() && arr.Top() == ')') {
-                arr.pop(); }}
+            arr.push(c);
+        }
+        else if (c == ')') {
+            while (!arr.isempty() && arr.Top() != '(') {
+                postfix += arr.Top();
+                arr.pop();
+            }
+            if (!arr.isempty() && arr.Top() == '(') {
+                arr.pop(); 
+            }
+        }
         else  {
-            while (!arr.isempty() && precedence(arr.Top()) > precedence(c)) {
-                prefix += arr.Top();
+            while (!arr.isempty() && precedence(arr.Top()) >= precedence(c)) {
+                postfix += arr.Top();
                 arr.pop();
             }
             arr.push(c);
-        }}
+        }
+    }
     while (!arr.isempty()) {
-        prefix += arr.Top();
+        postfix += arr.Top();
         arr.pop();
     }
-        reverse(exp.begin(),exp.end());
-return prefix;}
+return postfix;}
 int main() {
     mystack arr;
     string infix;
     cout << "Enter an infix expression: ";
     cin >> infix;
-    string prefix = infixToPrefix(infix,arr);
-    cout << "prefix expression: " << prefix << endl;
+    string postfix = infixToPostfix(infix,arr);
+    cout << "Postfix expression: " << postfix << endl;
     cout<<"name=venus chaudhary "<<endl;
     cout<<"rollno=22201012022";
     return 0;
