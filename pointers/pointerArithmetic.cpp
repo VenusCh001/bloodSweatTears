@@ -21,7 +21,10 @@ int main(){
     cout<<"++*ptr : "<<++*ptr<<"\n";
     cout<<"*(ptr+2): "<<*(ptr+2)<<"\n";
 
-    
+    *(arr+6)=100;
+    for(int i=0;i<8;i++){
+        cout<<*(arr+i)<<" ";
+    }
 
     return 0;
 }
