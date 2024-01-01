@@ -1,1 +1,1 @@
-f(arr,idx,i,j+1,n,result)
+    f(a,b,i,j,3,4,result);
