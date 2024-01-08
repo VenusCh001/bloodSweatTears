@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int* sort(int *arr,int n){
+void sort(int *arr,int n){
     for(int i=0;i<n;i++){
         for(int j=0;j<n-i-1;j++){
             if(arr[j]==0 and arr[j+1]>0){
@@ -8,7 +8,6 @@ int* sort(int *arr,int n){
             }
         }
     }
-    return arr;
 }
 int main(){
     int arr[]={0,5,0,3,4,2};

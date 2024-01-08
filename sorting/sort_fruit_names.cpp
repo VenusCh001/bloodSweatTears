@@ -14,9 +14,9 @@ void sort(string *arr,int n){
     }
 }
 int main(){
-    string arr[]={"papaya","mango","grapes","watermelon"};
-    sort(arr,4);
-    for(int i=0;i<4;i++){
+    string arr[]={"papaya","mango","grapes","watermelon","guava"};
+    sort(arr,5);
+    for(int i=0;i<5;i++){
         cout<<arr[i]<<" ";
     }
     return 0;
