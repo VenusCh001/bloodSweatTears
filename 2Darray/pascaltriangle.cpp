@@ -25,11 +25,19 @@ int main(){
     cin>>n;
     vector<vector<int>> ans;
     ans=pascaltriangle(n);
-    for(int i=0;i<ans.size();i++){
-        for(int j=0;j<ans[i].size();j++){
-            cout<<ans[i][j]<<" ";
+    vector<vector<int>> ques(43,vector<int>(2));
+    cout<<"write your question :"<<endl;
+    for(int i=0;i<ques.size();i++){
+        for(int j=0;j<2;j++){
+            cin>>ques[i][j];
         }
-        cout<<endl;
     }
+    int sum=0;
+    for(int i=0;i<ques.size();i++){
+        sum+=ans[ques[i][0]][ques[i][1]];
+        
+    }
+    cout<<sum;
+    
     return 0;
 }
