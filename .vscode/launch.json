@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/my folders/semester 1/C++/bloodSweatTears/leetcode",
-      "program": "d:/my folders/semester 1/C++/bloodSweatTears/leetcode/build/Debug/outDebug",
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
