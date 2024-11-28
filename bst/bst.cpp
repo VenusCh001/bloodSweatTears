@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 class node{
+    public:
     int data;
     node*left;
     node*right;
@@ -14,8 +15,8 @@ class node{
 class bst{
     public:
     node*root;
-    bst(){
-        root=NULL;
+    bst(node*val){
+        root=val;
     }
     void insertbst(node*&root,int val){
 
@@ -62,18 +63,3 @@ class bst{
     
 
 
-int main(){
-    bst bst1;
-    bst1.insertbst(bst1.root,20);
-    bst1.insertbst(bst1.root,10);
-    bst1.insertbst(bst1.root,30);
-    bst1.insertbst(bst1.root,8);
-    bst1.insertbst(bst1.root,12);
-    bst1.insertbst(bst1.root,25);
-    bst1.insertbst(bst1.root,35);
-    bst1.display(bst1.root);
-    bst1.deleteleafnodes(bst1.root);
-    cout<<endl;
-    bst1.display(bst1.root);
-    return 0;
-}

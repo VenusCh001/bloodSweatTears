@@ -1,5 +1,6 @@
 {
   "files.associations": {
+    "*.embeddedhtml": "html",
     "iostream": "cpp",
     "limits": "cpp",
     "utility": "cpp",
@@ -52,7 +53,8 @@
     "xtr1common": "cpp",
     "chrono": "cpp",
     "random": "cpp",
-    "valarray": "cpp"
+    "valarray": "cpp",
+    "functional": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "gcc",
