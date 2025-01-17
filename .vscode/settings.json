@@ -1,6 +1,7 @@
 {
   "files.associations": {
     "*.embeddedhtml": "html",
+    "*.ejs": "html",
     "iostream": "cpp",
     "limits": "cpp",
     "utility": "cpp",
@@ -54,7 +55,10 @@
     "chrono": "cpp",
     "random": "cpp",
     "valarray": "cpp",
-    "functional": "cpp"
+    "functional": "cpp",
+    "array": "cpp",
+    "bitset": "cpp",
+    "regex": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "gcc",
