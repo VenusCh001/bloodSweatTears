@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/my folders/semester 1/C++/bloodSweatTears/basic programs",
-      "program": "d:/my folders/semester 1/C++/bloodSweatTears/basic programs/build/Debug/outDebug",
+      "cwd": "d:/my folders/semester 1/C++/bloodSweatTears/dp",
+      "program": "d:/my folders/semester 1/C++/bloodSweatTears/dp/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
